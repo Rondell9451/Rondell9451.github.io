@@ -5,13 +5,3 @@ body {
 .padding {
     padding-top: 2rem;
 }
-
-.footer {
-    position: fixed;
-    bottom: 1rem;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: darkgray;
-    font-size: small;
-}

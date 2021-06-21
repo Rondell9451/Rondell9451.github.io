@@ -30,6 +30,9 @@
           class="text-white">[Website]</a> <a href="https://github.com/Jetaime-Alexandria/UniversalUnionWidget"
           class="text-white">[Repo]</a></li>
       <br>
+      <div id="repodisplay">
+
+      </div>
       <a href="https://github.com/Jetaime-Alexandria?tab=repositories" class="text-white"
         style="text-decoration: none;"><i class="fab fa-github"></i> View more on Github</a><br>
       <a href="https://github.com/Unicorns-Creations" class="text-white" style="text-decoration: none;"><i
@@ -37,5 +40,32 @@
     </div>
   </div>
 </body>
+
+<script>
+  async function main() {
+    var head = document.getElementById("repodisplay")
+    var owo = await fetch("https://api.github.com/users/Jetaime-Alexandria/repos").then(f => f.json())
+    console.log(owo)
+    var br = document.createElement("br")
+    owo.forEach(f => {
+      var no = document.createElement('li')
+      var yes = document.createElement('a')
+      yes.href = f.html_url
+      yes.innerText = `${f.full_name} [${f.description ? f.description : "No description"}]`
+      yes.className = "text-white"
+      if (f.archived) {
+        var poop = document.createElement('span')
+        poop.className = "badge bg-warning"
+        poop.innerText = "Archived"
+        yes.append(poop)
+      }
+      no.append(yes)
+      head.append(no)
+    })
+    head.append(br)
+  }
+
+  main()
+</script>
 
 </html>

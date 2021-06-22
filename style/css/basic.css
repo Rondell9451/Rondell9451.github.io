@@ -1,7 +1,99 @@
 body {
-   background-color: rgb(50, 81, 112);
+   background-color: #1e2329;
+}
+
+@keyframes bgcolor {
+    0% {
+        color: #45a3e5
+    }
+
+    30% {
+        color: #66bf39
+    }
+
+    60% {
+        color: #eb670f
+    }
+
+    90% {
+        color: #f35
+    }
+
+    100% {
+        color: #864cbf
+    }
+}
+
+.rainbow {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.container {
+    background-color: #2d333b;
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    min-height: 5rem;
+    max-width: 720px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.container .header {
+    padding: 2rem;
 }
 
 .padding {
     padding-top: 2rem;
+}
+
+#authorAvatar {
+    width: 75px;
+    border-radius: 1rem;
+}
+
+#authorName {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#authorBio {
+    padding-top: 1rem;
+}
+
+#repoContainer {
+    padding-top: 1rem;
+}
+
+#repoContainerTitle {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#repodisplay {
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+min-height: 24rem;
+max-height: 24rem;
+overflow-x: auto;
+overflow-y: auto;
+}
+
+.cardImg {
+    width: 175px;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1e2329;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
